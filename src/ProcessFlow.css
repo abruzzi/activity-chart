@@ -1,19 +1,27 @@
 .process-container {
   width: 1000px;
   margin: 0 auto;
-  padding: 20px;
-  background-color: #f0f0f0;
+  border-radius: 8px;
+  border: 1px solid #eee;
 }
 
 .process-title {
   font-size: 32px;
   font-weight: bold;
   margin-bottom: 20px;
+  background-color: #f0f0f0;
+  padding: 16px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.steps-container {
+  padding: 16px;
 }
 
 .process-steps {
   position: relative;
-  padding-left: 40px;
+  padding-left: 16px;
 }
 
 .process-steps::before {
@@ -21,23 +29,36 @@
   position: absolute;
   left: 0;
   top: 0;
-  bottom: 60px;
+  bottom: 64px;
   width: 2px;
   background-color: deeppink;
 }
 
 .process-step {
   position: relative;
-  margin-bottom: 15px;
-  width: 400px;
+  margin-bottom: 16px;
+  width: 100%;
+  text-wrap: nowrap;
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-.process-step::before {
+.condition-button {
+  width: 24px;
+  height: 24px;
+  background-color: lightblue;
+  border-radius: 6px;
+}
+
+.the-link {
   content: '';
   position: absolute;
-  left: -40px;
-  top: 30px;
-  width: 38px;
+  left: -16px;
+  top: 26px;
+  width: 54px;
   height: 22px;
   border-left: 2px solid yellowgreen;
   border-bottom: 2px solid orangered;
@@ -45,19 +66,14 @@
 }
 
 .step-content {
-  background-color: white;
+  background-color: #efefef;
   border-radius: 8px;
   padding: 20px;
+  width: 360px;
 }
 
 .sub-step {
-  margin-left: 60px;
-  margin-top: 15px;
-}
-
-.sub-step::before {
-  left: -40px;
-  width: 38px;
+  margin-left: 36px;
 }
 
 .step-title {
@@ -74,6 +90,7 @@
 
 .sub-steps {
   position: relative;
+  margin-left: 48px;
 }
 
 .sub-steps::before {
@@ -81,7 +98,7 @@
   position: absolute;
   left: 20px;
   top: -15px;
-  height: calc(100% - 50px);
+  height: calc(100% - 64px);
   width: 2px;
   background-color: #ccc;
 }

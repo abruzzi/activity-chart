@@ -9,6 +9,8 @@ type ProcessStepProps = {
 
 const ProcessStep = ({ title, description, isSubStep, children }: ProcessStepProps) => (
   <div className={`process-step ${isSubStep ? 'sub-step' : ''}`}>
+    <div className="the-link" />
+    <div className="condition-button" />
     <div className="step-content">
       <h3 className="step-title">{title}</h3>
       <p className="step-description">{description}</p>
@@ -20,36 +22,38 @@ const ProcessStep = ({ title, description, isSubStep, children }: ProcessStepPro
 const ProcessVisualization = () => (
   <div className="process-container">
     <h1 className="process-title">The process</h1>
-    <div className="process-steps">
-      <ProcessStep
-        title="A step of a process"
-        description="A short description of the step here"
-      />
-      <ProcessStep
-        title="Another step of a process"
-        description="A short description of the step here"
-      >
+    <div className='steps-container'>
+      <div className="process-steps">
         <ProcessStep
-          title="A sub step of a step"
+          title="A step of a process"
           description="A short description of the step here"
-          isSubStep
+        />
+        <ProcessStep
+          title="Another step of a process"
+          description="A short description of the step here"
         >
-                  <ProcessStep
-          title="A sub step of a step"
-          description="A short description of the step here"
-          isSubStep
-        />
-          </ProcessStep>
+          <ProcessStep
+            title="A sub step of a step"
+            description="A short description of the step here"
+            isSubStep
+          >
+                    <ProcessStep
+            title="A sub step of a step"
+            description="A short description of the step here"
+            isSubStep
+          />
+            </ProcessStep>
+          <ProcessStep
+            title="Another sub step of a step"
+            description="A short description of the step here"
+            isSubStep
+          />
+        </ProcessStep>
         <ProcessStep
-          title="Another sub step of a step"
+          title="Yet another step of a process"
           description="A short description of the step here"
-          isSubStep
         />
-      </ProcessStep>
-      <ProcessStep
-        title="Yet another step of a process"
-        description="A short description of the step here"
-      />
+      </div>
     </div>
   </div>
 );
