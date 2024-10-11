@@ -1,0 +1,87 @@
+.process-container {
+  width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+
+.process-title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.process-steps {
+  position: relative;
+  padding-left: 40px;
+}
+
+.process-steps::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 60px;
+  width: 2px;
+  background-color: deeppink;
+}
+
+.process-step {
+  position: relative;
+  margin-bottom: 15px;
+  width: 400px;
+}
+
+.process-step::before {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 30px;
+  width: 38px;
+  height: 22px;
+  border-left: 2px solid yellowgreen;
+  border-bottom: 2px solid orangered;
+  border-bottom-left-radius: 16px;
+}
+
+.step-content {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.sub-step {
+  margin-left: 60px;
+  margin-top: 15px;
+}
+
+.sub-step::before {
+  left: -40px;
+  width: 38px;
+}
+
+.step-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0 0 10px 0;
+}
+
+.step-description {
+  font-size: 14px;
+  margin: 0;
+  color: #666;
+}
+
+.sub-steps {
+  position: relative;
+}
+
+.sub-steps::before {
+  content: '';
+  position: absolute;
+  left: 20px;
+  top: -15px;
+  height: calc(100% - 50px);
+  width: 2px;
+  background-color: #ccc;
+}
