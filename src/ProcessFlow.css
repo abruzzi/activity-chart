@@ -1,6 +1,10 @@
+:root {
+  --link-color: #efefef;
+}
+
 .process-container {
   width: 1000px;
-  margin: 0 auto;
+  margin: 2rem auto;
   border-radius: 8px;
   border: 1px solid #eee;
 }
@@ -21,7 +25,7 @@
 
 .process-steps {
   position: relative;
-  padding-left: 16px;
+  /* padding-left: 16px; */
 }
 
 .process-steps::before {
@@ -38,10 +42,9 @@
   position: relative;
   margin-bottom: 16px;
   width: 100%;
-  text-wrap: nowrap;
   display: flex;
   flex-direction: row;
-  gap: 16px;
+  gap: 24px;
   align-items: center;
   flex-wrap: wrap;
 }
@@ -51,14 +54,27 @@
   height: 24px;
   background-color: lightblue;
   border-radius: 6px;
+  z-index: 9;
+}
+
+.placeholder {
+  width: 24px;
+  height: 24px;
+  background-color: transparent;
+  border-radius: 6px;
+  z-index: 9;
 }
 
 .the-link {
+  position: relative;
+}
+
+.the-link::before {
   content: '';
   position: absolute;
-  left: -16px;
-  top: 26px;
-  width: 54px;
+  left: 0;
+  top: -22px;
+  width: 70px;
   height: 22px;
   border-left: 2px solid yellowgreen;
   border-bottom: 2px solid orangered;
@@ -73,7 +89,7 @@
 }
 
 .sub-step {
-  margin-left: 36px;
+  margin-left: 48px;
 }
 
 .step-title {
@@ -96,9 +112,9 @@
 .sub-steps::before {
   content: '';
   position: absolute;
-  left: 20px;
-  top: -15px;
-  height: calc(100% - 64px);
+  left: 48px;
+  top: -24px;
+  height: calc(100% - 62px);
   width: 2px;
   background-color: #ccc;
 }
