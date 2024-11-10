@@ -1,0 +1,63 @@
+{
+  "name": "Food",
+  "children": [
+    {
+      "name": "Dairy",
+      "children": [
+        {
+          "name": "Milk"
+        },
+        {
+          "name": "Cheese",
+          "children": [
+            {
+              "name": "Blue cheese"
+            },
+            {
+              "name": "Feta"
+            },
+            {
+              "name": "Cheddar"
+            }
+          ]
+        },
+        {
+          "name": "Yogurt"
+        }
+      ]
+    },
+    {
+      "name": "Fruit",
+      "children": [
+        {
+          "name": "Stone fruit",
+          "children": [
+            {
+              "name": "Peach"
+            },
+            {
+              "name": "Plum"
+            },
+            {
+              "name": "Nectarine"
+            }
+          ]
+        },
+        {
+          "name": "Berries",
+          "children": [
+            {
+              "name": "Strawberry"
+            },
+            {
+              "name": "Blueberry"
+            },
+            {
+              "name": "Raspberry"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

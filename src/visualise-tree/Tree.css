@@ -1,0 +1,62 @@
+.tree-container {
+    width: 1000px;
+    margin: 16px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+}
+
+.tree-node-content {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    width: 200px;
+    padding: 4px 8px;
+    border: 1px solid #eee;
+    color: #333;
+    border-radius: 4px;
+}
+
+.inline {
+    display: flex;
+    align-items: center;
+}
+
+.tree-node {
+    margin-top: 8px;
+    margin-left: 16px;
+    position: relative;
+}
+
+.tree-node::before {
+    content: '';
+    position: absolute;
+    border-left: 1px solid #c11616;
+    border-right: 1px solid #0505d4;
+    top: -8px;
+    bottom: 0;
+    left: -32px;
+    width: 0;
+}
+
+.last-node::before {
+    height: 24px;
+}
+
+.link-to-parent {
+    position: relative;
+}
+
+.link-to-parent::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -32px;
+    width: 32px;
+    height: 2px;
+    background-color: #1a8884;
+}
+
+.sub-tree-container {
+    margin-left: 24px;
+}

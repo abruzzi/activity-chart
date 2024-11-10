@@ -1,6 +1,5 @@
 import { IoTimeOutline } from "react-icons/io5";
-import './ProcessFlow.css';
-
+import "./ProcessFlow.css";
 
 type ProcessStepProps = {
   title: string;
@@ -10,14 +9,22 @@ type ProcessStepProps = {
   children?: React.ReactNode;
 };
 
-const ProcessStep = ({ title, description, isSubStep, hasCondition, children }: ProcessStepProps) => (
-  <div className={`process-step ${isSubStep ? 'sub-step' : ''}`}>
+const ProcessStep = ({
+  title,
+  description,
+  isSubStep,
+  hasCondition,
+  children,
+}: ProcessStepProps) => (
+  <div className={`process-step ${isSubStep ? "sub-step" : ""}`}>
     <div className="the-link" />
-    {
-      hasCondition ? <div className="condition-button">
+    {hasCondition ? (
+      <div className="condition-button">
         <IoTimeOutline />
-      </div> : <div className="placeholder" />
-    }
+      </div>
+    ) : (
+      <div className="placeholder" />
+    )}
     <div className="step-content">
       <h3 className="step-title">{title}</h3>
       <p className="step-description">{description}</p>
@@ -29,7 +36,7 @@ const ProcessStep = ({ title, description, isSubStep, hasCondition, children }: 
 const ProcessVisualization = () => (
   <div className="process-container">
     <h1 className="process-title">The process</h1>
-    <div className='steps-container'>
+    <div className="steps-container">
       <div className="process-steps">
         <ProcessStep
           title="A step of a process"

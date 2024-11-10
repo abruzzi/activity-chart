@@ -1,0 +1,113 @@
+{
+  "name": ".",
+  "children": [
+    {
+      "name": "build",
+      "children": [
+        {
+          "name": "classes",
+          "children": [
+            {
+              "name": "java",
+              "children": [
+                {
+                  "name": "main"
+                },
+                {
+                  "name": "test"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "generated",
+          "children": [
+            {
+              "name": "sources",
+              "children": [
+                {
+                  "name": "annotationProcessor",
+                  "children": [
+                    {
+                      "name": "java",
+                      "children": [
+                        {
+                          "name": "main"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "headers",
+                  "children": [
+                    {
+                      "name": "java",
+                      "children": [
+                        {
+                          "name": "main"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "resources",
+          "children": [
+            {
+              "name": "main"
+            },
+            {
+              "name": "test"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "build.gradle"
+    },
+    {
+      "name": "settings.gradle"
+    },
+    {
+      "name": "src",
+      "children": [
+        {
+          "name": "main",
+          "children": [
+            {
+              "name": "java",
+              "children": [
+                {
+                  "name": "RemoveFeatureToggleRecipe.java"
+                },
+                {
+                  "name": "RunRecipe.java"
+                }
+              ]
+            },
+            {
+              "name": "test",
+              "children": [
+                {
+                  "name": "java",
+                  "children": [
+                    {
+                      "name": "RemoveFeatureToggleRecipeTest.java"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
